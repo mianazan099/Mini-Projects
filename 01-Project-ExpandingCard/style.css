@@ -1,0 +1,72 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 6vh 6vw;
+}
+
+.card {
+  height: 80vh;
+  transition: flex 1s, box-shadow 1s;
+  border-radius: 50px;
+  background-color: lightgrey;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex: 0.5;
+  overflow: hidden;
+  position: relative;
+}
+
+.card p {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-size: 24px;
+  color: white;
+  font-family: sans-serif;
+  transform: translateX(-300px);
+  text-shadow: 0 0 10px black;
+  transition: transform 1s;
+}
+
+.card.active {
+  flex: 5;
+}
+
+.card.active p {
+  transform: translate(0);
+}
+
+.one {
+  background-image: url(./images/Explore\ The\ World.jpg);
+}
+.two {
+  background-image: url(./images/Wild\ Forest.jpg);
+}
+.three {
+  background-image: url(./images/City\ on\ Winter.jpg);
+}
+.four {
+  background-image: url(./images/Sunny\ Beach.jpg);
+}
+.five {
+  background-image: url(./images/Mountains\ -\ Clouds.jpg);
+}
+
+@media (max-width: 480px) {
+  .three,
+  .five {
+    display: none;
+  }
+}
