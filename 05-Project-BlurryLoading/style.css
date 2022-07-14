@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.bg {
+  min-height: 100vh;
+  min-width: 100vw;
+  background-image: url("https://source.unsplash.com/1600x900/?nature,water");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.number {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 4rem;
+  color: white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
