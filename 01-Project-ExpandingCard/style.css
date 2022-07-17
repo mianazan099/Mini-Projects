@@ -25,7 +25,7 @@ body {
   flex: 0.5;
   overflow: hidden;
   position: relative;
-  transition: flex 1s, box-shadow 1s;
+  transition: flex 0.5s, box-shadow 0.5s;
 }
 
 .card p {
@@ -37,7 +37,7 @@ body {
   font-family: sans-serif;
   transform: translateX(-300px);
   text-shadow: 0 0 10px black;
-  transition: transform 1s;
+  transition: transform 0.5s;
 }
 
 .card.active {
