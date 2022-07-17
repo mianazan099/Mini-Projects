@@ -25,7 +25,7 @@ body {
 }
 
 .input.active {
-  transform: translate(-25px);
+  transform: translate(-24px);
 }
 
 .input input {
@@ -53,7 +53,7 @@ body {
 }
 
 .input.active .icon {
-  transform: translateX(200px);
+  transform: translateX(198px);
 }
 
 .input .fa-search {
