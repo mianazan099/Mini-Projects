@@ -21,6 +21,11 @@ body {
   height: 50px;
   display: flex;
   position: relative;
+  transition: transform 0.3s ease;
+}
+
+.input.active {
+  transform: translate(-25px);
 }
 
 .input input {
