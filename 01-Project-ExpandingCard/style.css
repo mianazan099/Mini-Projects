@@ -17,15 +17,15 @@ body {
 
 .card {
   height: 80vh;
-  transition: flex 1s, box-shadow 1s;
-  border-radius: 50px;
   background-color: lightgrey;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  border-radius: 50px;
   flex: 0.5;
   overflow: hidden;
   position: relative;
+  transition: flex 1s, box-shadow 1s;
 }
 
 .card p {

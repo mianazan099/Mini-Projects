@@ -1,6 +1,19 @@
 const contentList = document.querySelectorAll(".content");
 
-contentList.forEach((content) => {
-  content.classList.add("show");
-  console.log(content.innerHTML.substring(8, 10));
-});
+window.addEventListener("scroll", showContent);
+
+showContent();
+
+function showContent() {
+  const windowHeight = (window.innerHeight / 5) * 4;
+
+  contentList.forEach((element) => {
+    const topPos = element.getBoundingClientRect().top;
+
+    if (topPos < windowHeight) {
+      element.classList.add("show");
+    } else {
+      element.classList.remove("show");
+    }
+  });
+}

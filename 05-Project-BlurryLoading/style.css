@@ -11,7 +11,7 @@
 .bg {
   min-height: 100vh;
   min-width: 100vw;
-  background-image: url("https://source.unsplash.com/1600x900/?nature,water");
+  background-image: url("https://images.unsplash.com/photo-1473654729523-203e25dfda10?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=900&ixid=MnwxfDB8MXxyYW5kb218MHx8bmF0dXJlLHdhdGVyfHx8fHx8MTY1Nzk4Njg4Mg&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1600");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

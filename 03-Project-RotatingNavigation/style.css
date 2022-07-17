@@ -31,11 +31,11 @@ a {
   position: fixed;
   left: -100px;
   top: -100px;
-  transition: transform 1s;
+  transition: transform 1s ease;
   z-index: 1;
 }
 
-.nav-open {
+body.open-nav .menu-btn {
   transform: rotate(-90deg);
 }
 
@@ -59,18 +59,18 @@ a {
   background-color: white;
   color: #222;
   min-height: 100vh;
-  transition: transform 1s;
+  transition: transform 1s ease;
   transform-origin: top left;
+}
+
+body.open-nav .container {
+  transform: rotate(-18deg);
 }
 
 .content {
   max-width: 1100px;
   margin: 0 auto;
   padding: 100px 50px;
-}
-
-.nav-open_body {
-  transform: rotate(-20deg);
 }
 
 .content small {
@@ -94,10 +94,10 @@ a {
   left: 26px;
   text-transform: uppercase;
   transform: translate(-200px);
-  transition: transform 1s ease-out;
+  transition: transform 1s ease;
 }
 
-.show-nav {
+body.open-nav .navbar {
   transform: translate(0);
 }
 
@@ -107,11 +107,11 @@ a {
 
 .link {
   margin-bottom: 2.5rem;
-  transition: transform 1s;
+  transition: transform 1s ease;
 }
 
-.show-nav .link {
-  transform: translate(calc(1rem * var(--length, 0)));
+body.open-nav .link {
+  transform: translate(calc(1rem * var(--len, 0)));
 }
 
 .link i {

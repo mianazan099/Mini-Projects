@@ -10,10 +10,10 @@
 
 body {
   min-height: 100vh;
-  background: linear-gradient(90deg, #7d5fff, #7158e2);
-  font-family: "Roboto", sans-serif;
   display: grid;
   place-content: center;
+  font-family: "Roboto", sans-serif;
+  background: linear-gradient(90deg, #7d5fff, #7158e2);
 }
 
 .input {

@@ -15,22 +15,21 @@
 }
 
 body {
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
   font-family: Muli;
   background-color: var(--bg-clr);
 }
 
 .container {
   width: 350px;
-  display: grid;
-  gap: 2rem;
 }
 
 .progress_container {
   position: relative;
+  margin-bottom: 2rem;
 }
 
 .progress {
@@ -41,17 +40,17 @@ body {
   top: 50%;
   transform: translateY(-50%);
   z-index: -1;
-  transition: width 0.5s;
+  transition: width 0.3s;
 }
 
 .progress_container::after {
   content: "";
-  position: absolute;
-  width: 350px;
   height: 4px;
+  width: 350px;
+  background-color: var(--line-border-empty);
+  position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: var(--line-border-empty);
   z-index: -2;
 }
 
@@ -61,19 +60,19 @@ body {
 }
 
 .circle {
+  width: 30px;
+  aspect-ratio: 1;
   background-color: white;
   color: #999;
-  width: 30px;
   display: inline-grid;
   place-content: center;
-  aspect-ratio: 1;
-  border-radius: 50%;
   border: 3px solid var(--line-border-empty);
+  border-radius: 50%;
 }
 
 .circle.active {
   border-color: var(--line-border-fill);
-  transition: border-color 0.5s;
+  transition: border-color 0.3s;
 }
 
 .button_container {
@@ -90,7 +89,7 @@ body {
   border-radius: 0.25rem;
   color: white;
   cursor: pointer;
-  transition: background 0.5s;
+  transition: background 0.3s;
 }
 
 .btn[disabled] {
