@@ -7,29 +7,31 @@
 *,
 *::before,
 *::after {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  min-height: 100vh;
+  background-color: var(--clr-neutral-900);
   display: grid;
   place-content: center;
+  min-height: 100vh;
   line-height: 1.6;
-  background-color: var(--clr-neutral-900);
   font-family: sans-serif;
 }
 
 .card {
-  color: var(--clr-neutral-100);
   background-color: hsl(0, 0%, 20%);
-  background-image: var(--bg-img);
+  background-image: url(./img.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
+  color: var(--clr-neutral-100);
   padding: 10rem 0 0;
   max-width: 35ch;
   border-radius: 1rem;
   overflow: hidden;
-  transition: transform 500ms ease;
 }
 
 .card__content {
@@ -63,14 +65,15 @@ body {
   position: relative;
   width: max-content;
 }
+
 .card__title::after {
   content: "";
   position: absolute;
   bottom: -2px;
   left: calc(var(--padding) * -1);
-  height: 4px;
-  width: calc(100% + var(--padding));
   background-color: var(--clr-accent-400);
+  width: calc(100% + var(--padding));
+  height: 4px;
   transform-origin: left;
   transition: transform 500ms ease;
 }
@@ -82,15 +85,15 @@ body {
 
 .card__body {
   color: hsla(0, 0%, 100%, 0.85);
+  margin-block: 6px;
 }
 
 .card__button {
-  cursor: pointer;
-  display: inline;
-  text-decoration: none;
-  color: var(--clr-neutral-900);
   background-color: var(--clr-accent-400);
+  color: var(--clr-neutral-900);
   padding: 0.5em 1.25em;
+  text-decoration: none;
+  display: inline;
   border-radius: 0.25em;
   font-weight: 600;
   font-size: 0.8rem;

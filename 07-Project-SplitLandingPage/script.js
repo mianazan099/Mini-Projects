@@ -1,17 +1,15 @@
-const body = document.querySelector(".body");
+const container = document.querySelector(".container");
 const left = document.querySelector(".left");
 const right = document.querySelector(".right");
 
-left.addEventListener("mouseover", () => {
-  body.classList.add("hover-left");
-});
-left.addEventListener("mouseleave", () => {
-  body.classList.remove("hover-left");
-});
+left.addEventListener("mouseover", () => container.classList.add("hover-left"));
+left.addEventListener("mouseleave", () =>
+  container.classList.remove("hover-left")
+);
 
-right.addEventListener("mouseover", () => {
-  body.classList.add("hover-right");
-});
-right.addEventListener("mouseleave", () => {
-  body.classList.remove("hover-right");
-});
+right.addEventListener("mouseover", () =>
+  container.classList.add("hover-right")
+);
+right.addEventListener("mouseleave", () =>
+  container.classList.remove("hover-right")
+);
