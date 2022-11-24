@@ -14,9 +14,10 @@
 
 body {
   background-color: var(--clr-neutral-900);
+  color: var(--clr-neutral-100);
+  min-height: 100vh;
   display: grid;
   place-content: center;
-  min-height: 100vh;
   line-height: 1.6;
   font-family: sans-serif;
 }
@@ -27,7 +28,6 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  color: var(--clr-neutral-100);
   padding: 10rem 0 0;
   max-width: 35ch;
   border-radius: 1rem;
@@ -42,23 +42,6 @@ body {
     hsl(20 0% 0% / 0.2) 10%,
     hsl(0 0% 0% / 1)
   );
-  transition: transform 500ms ease;
-}
-
-.card:hover .card__content,
-.card:focus-within .card__content {
-  transform: translate(0);
-  transition-delay: 500ms;
-}
-
-.card:focus-within .card__content {
-  transition-delay: -500ms;
-}
-
-.card:hover .card__content > *,
-.card:focus-within .card__content > * {
-  opacity: 1;
-  transition-delay: 500ms;
 }
 
 .card__title {
@@ -69,18 +52,11 @@ body {
 .card__title::after {
   content: "";
   position: absolute;
+  height: 4px;
+  width: calc(100% + var(--padding));
+  background-color: var(--clr-accent-400);
   bottom: -2px;
   left: calc(var(--padding) * -1);
-  background-color: var(--clr-accent-400);
-  width: calc(100% + var(--padding));
-  height: 4px;
-  transform-origin: left;
-  transition: transform 500ms ease;
-}
-
-.card:hover .card__title::after,
-.card:focus-within .card__title::after {
-  transform: scale(1);
 }
 
 .card__body {
@@ -105,19 +81,44 @@ body {
 }
 
 @media (hover) {
+  .card:hover,
+  .card:focus-within {
+    transform: scale(1.05);
+    transition: transform 500ms ease;
+  }
+
   .card__content {
     transform: translateY(60%);
+    transition: transform 500ms ease;
   }
+
+  .card:hover .card__content,
+  .card:focus-within .card__content {
+    transform: translate(0);
+    transition-delay: 500ms;
+  }
+
+  .card:focus-within .card__content {
+    transition-delay: -500ms;
+  }
+
   .card__content > * + * {
     opacity: 0;
     transition: opacity 500ms linear;
   }
+  .card:hover .card__content > *,
+  .card:focus-within .card__content > * {
+    opacity: 1;
+    transition-delay: 500ms;
+  }
   .card__title::after {
     transform: scale(0);
+    transform-origin: left;
+    transition: transform 500ms ease;
   }
-  .card:hover,
-  .card:focus-within {
-    transform: scale(1.05);
+  .card:hover .card__title::after,
+  .card:focus-within .card__title::after {
+    transform: scale(1);
   }
 }
 
